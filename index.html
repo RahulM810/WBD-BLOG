@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybersecurity Awareness - Latest news, threats, and protection tips for the digital age">
+    <title>Cybersecurity Awareness Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .cyber-threat { transition: transform 0.3s; }
+        .cyber-threat:hover { transform: translateY(-5px); }
+        .featured-card { min-height: 250px; }
+       
+      
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+  </symbol>
+</svg>
+
+<div class="container">
+  <header class="border-bottom lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a href="#" class="link-secondary">
+          <svg width="24" height="24" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+            <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+            <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="col-4 text-center">
+        <a href="index.html"><h1 class="blog-header-logo text-body-emphasis text-decoration-none">Cybersecurity Awareness Hub</h1></a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="#">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+      <a class="nav-item nav-link link-body-emphasis active" href="https://thehackernews.com/">Latest Threats</a>
+      <a class="nav-item nav-link link-body-emphasis" href="tools.html">Security Tools</a>
+      <a class="nav-item nav-link link-body-emphasis" href="quiz.html">Security Quiz</a>
+      <a class="nav-item nav-link link-body-emphasis" href="mission.html">Our Mission</a>
+      <a class="nav-item nav-link link-body-emphasis" href="team.html">Our Team</a>
+      <a class="nav-item nav-link link-body-emphasis" href="password-guidelines.html">Password Checker</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary cyber-threat">
+    <div class="col-lg-6 px-0">
+      <h1 class="display-4 fst-italic">Stay Safe in the Digital World</h1>
+      <p class="lead my-3">Get the latest cybersecurity news, threat alerts, and expert advice to protect yourself and your organization from evolving digital dangers.</p>
+      <p class="lead mb-0"><a href="https://www.springboard.com/blog/cybersecurity/how-to-learn-cybersecurity/" class="text-body-emphasis fw-bold">Start your security journey...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative featured-card cyber-threat">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Team</strong>
+          <h3 class="mb-0">Meet Our Security Experts</h3>
+          <div class="mb-1 text-body-secondary">Updated weekly</div>
+          <p class="card-text mb-auto">Learn about the cybersecurity professionals behind this initiative and their areas of expertise.</p>
+          <a href="team.html" class="icon-link gap-1 icon-link-hover stretched-link">
+            Continue reading
+            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="./images/cs1.jpeg" width="200" height="250" alt="Security team">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative featured-card cyber-threat">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success-emphasis">Mission</strong>
+          <h3 class="mb-0">Our Cybersecurity Vision</h3>
+          <div class="mb-1 text-body-secondary">Since 2023</div>
+          <p class="mb-auto">We're committed to empowering individuals and organizations with knowledge to navigate the digital world safely.</p>
+          <a href="mission.html" class="icon-link gap-1 icon-link-hover stretched-link">
+            Continue reading
+            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="./images/cs2.jpeg" width="200" height="250" alt="Digital security">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        Latest Cybersecurity Updates
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Emerging Threats in 2025</h2>
+
+        <p>The cybersecurity landscape continues to evolve rapidly, with attackers developing more sophisticated techniques. Here's what you need to watch out for in 2024:</p>
+        
+        <blockquote class="blockquote">
+          <p>"The average cost of a data breach has risen to $4.45 million in 2023, a 15% increase over three years."</p>
+          <footer class="blockquote-footer">IBM Security <cite>Cost of a Data Breach Report 2023</cite></footer>
+        </blockquote>
+        
+        <p>Our threat intelligence team has identified several key trends that organizations and individuals should be aware of:</p>
+        
+        <h3>Cyber Attack Statistics</h3>
+        <p>Recent data shows a concerning increase in several attack vectors:</p>
+        <table class="table stat-table">
+          <thead>
+            <tr>
+              <th>Type of Cyber Attack</th>
+              <th>2023 Incidents</th>
+              <th>2024 Projections</th>
+              <th>Increase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Phishing Attacks</td>
+              <td>10,000</td>
+              <td>12,500</td>
+              <td class="text-danger">+25%</td>
+            </tr>
+            <tr>
+              <td>Malware Infections</td>
+              <td>8,000</td>
+              <td>9,000</td>
+              <td class="text-danger">+12.5%</td>
+            </tr>
+            <tr>
+              <td>Ransomware Attacks</td>
+              <td>6,500</td>
+              <td>7,800</td>
+              <td class="text-danger">+20%</td>
+            </tr>
+            <tr>
+              <td>DDoS Attacks</td>
+              <td>5,200</td>
+              <td>6,000</td>
+              <td class="text-danger">+15.4%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Key Protective Measures</h4>
+        <ul>
+          <li>Implement multi-factor authentication (MFA) on all accounts</li>
+          <li>Keep all software updated with the latest security patches</li>
+          <li>Educate employees/yourself about phishing recognition</li>
+          <li>Maintain regular backups of critical data</li>
+          <li>Use a reputable password manager</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">About This Resource</h4>
+          <p class="mb-0">Our team of certified cybersecurity professionals provides up-to-date information on threats, vulnerabilities, and protection strategies to help you stay secure in an increasingly dangerous digital landscape.</p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent Alerts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="phishing-alert.html">
+                <img src="./images/phishing.avif" width="96" height="96" style="object-fit: cover;" alt="Phishing alert">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">New Phishing Tactics Targeting Banks</h6>
+                  <small class="text-body-secondary">January 28, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="password-guidelines.html">
+                <img src="./images/cs4.jpeg" width="96" height="96" style="object-fit: cover;" alt="Password security">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Updated Password Security Guidelines</h6>
+                  <small class="text-body-secondary">January 25, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="zero-day-alert.html">
+                <img src="./images/0DAY.png" width="96" height="96" style="object-fit: cover;" alt="Zero day exploit">
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Critical Zero-Day Exploit in Common Software</h6>
+                  <small class="text-body-secondary">January 22, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Security Resources</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://www.cisa.gov/cybersecurity" target="_blank">CISA Cybersecurity Resources</a></li>
+            <li><a href="https://www.ncsc.gov.uk/" target="_blank">UK National Cyber Security Centre</a></li>
+            <li><a href="https://www.sans.org/" target="_blank">SANS Institute</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quiz.html">Security Quiz</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Connect With Us</h5>
+        <a href="#" class="link-secondary me-2">
+          <svg width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg>
+        </a>
+        <a href="#" class="link-secondary me-2">
+          <svg width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.436.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Newsletter</h5>
+        <p>Monthly security tips and threat alerts</p>
+        <form>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
+            <button class="btn btn-secondary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="mb-0">
+      <a href="#">Back to top</a> • © 2025 Cybersecurity Awareness Hub
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  
+  (() => {
+    'use strict'
+    
+    const getStoredTheme = () => localStorage.getItem('theme')
+    const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+    const getPreferredTheme = () => {
+      const storedTheme = getStoredTheme()
+      if (storedTheme) {
+        return storedTheme
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+
+    const setTheme = theme => {
+      if (theme === 'auto') {
+        document.documentElement.setAttribute('data-bs-theme', 
+          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      } else {
+        document.documentElement.setAttribute('data-bs-theme', theme)
+      }
+    }
+
+    setTheme(getPreferredTheme())
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const storedTheme = getStoredTheme()
+      if (storedTheme !== 'light' && storedTheme !== 'dark') {
+        setTheme(getPreferredTheme())
+      }
+    })
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          setStoredTheme(theme)
+          setTheme(theme)
+          document.querySelectorAll('[data-bs-theme-value]').forEach(t => {
+            t.setAttribute('aria-pressed', t === toggle)
+          })
+        })
+      })
+    })
+  })()
+</script>
+</body>
+</html>

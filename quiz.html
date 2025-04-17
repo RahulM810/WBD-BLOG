@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Quiz | Cybersecurity Awareness Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .question-card {
+            margin-bottom: 20px;
+            display: none;
+        }
+        .question-card.active {
+            display: block;
+        }
+        .progress {
+            height: 10px;
+            margin-bottom: 20px;
+        }
+        .result-card {
+            display: none;
+        }
+        .option-label {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option-label:hover {
+            background-color: #f8f9fa;
+        }
+        input[type="radio"]:checked + .option-label {
+            background-color: #e9f7fe;
+            border-color: #86b7fe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="border-bottom lh-1 py-3">
+        </header>
+        <div class="nav-scroller py-1 mb-3 border-bottom">
+            <nav class="nav nav-underline justify-content-between">
+                <a class="nav-item nav-link link-body-emphasis" href="index.html">Latest Threats</a>
+                <a class="nav-item nav-link link-body-emphasis" href="tools.html">Security Tools</a>
+                <a class="nav-item nav-link link-body-emphasis active" href="quiz.html">Security Quiz</a>
+                <a class="nav-item nav-link link-body-emphasis" href="mission.html">Our Mission</a>
+                <a class="nav-item nav-link link-body-emphasis" href="team.html">Our Team</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <div class="quiz-container">
+            <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+                <div class="col-md-8 px-0">
+                    <h1 class="display-4 fst-italic">Cybersecurity Knowledge Quiz</h1>
+                    <p class="lead my-3">Test your cybersecurity knowledge with this interactive quiz.</p>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+            </div>
+
+            <form id="quizForm">
+                <div class="card question-card active" id="question1">
+                    <div class="card-body">
+                        <h5 class="card-title">Question 1 of 5</h5>
+                        <p class="card-text">What is the most secure method to create and store passwords?</p>
+                        <div class="options">
+                            <input type="radio" name="q1" id="q1a" value="a" class="d-none">
+                            <label for="q1a" class="option-label">
+                                Use the same complex password for all accounts
+                            </label>
+                            
+                            <input type="radio" name="q1" id="q1b" value="b" class="d-none">
+                            <label for="q1b" class="option-label">
+                                Write them down in a notebook kept near your computer
+                            </label>
+                            
+                            <input type="radio" name="q1" id="q1c" value="c" class="d-none">
+                            <label for="q1c" class="option-label">
+                                Use a password manager with unique passwords for each account
+                            </label>
+                            
+                            <input type="radio" name="q1" id="q1d" value="d" class="d-none">
+                            <label for="q1d" class="option-label">
+                                Store them in a text file on your desktop
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card question-card" id="question2">
+                    <div class="card-body">
+                        <h5 class="card-title">Question 2 of 5</h5>
+                        <p class="card-text">What should you do if you receive a suspicious email asking for personal information?</p>
+                        <div class="options">
+                            <input type="radio" name="q2" id="q2a" value="a" class="d-none">
+                            <label for="q2a" class="option-label">
+                                Reply with the requested information
+                            </label>
+                            
+                            <input type="radio" name="q2" id="q2b" value="b" class="d-none">
+                            <label for="q2b" class="option-label">
+                                Click on any links to verify the sender's identity
+                            </label>
+                            
+                            <input type="radio" name="q2" id="q2c" value="c" class="d-none">
+                            <label for="q2c" class="option-label">
+                                Delete the email without responding
+                            </label>
+                            
+                            <input type="radio" name="q2" id="q2d" value="d" class="d-none">
+                            <label for="q2d" class="option-label">
+                                Forward it to your IT department or mark as spam
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card question-card" id="question3">
+                    <div class="card-body">
+                        <h5 class="card-title">Question 3 of 5</h5>
+                        <p class="card-text">What does HTTPS in a website URL indicate?</p>
+                        <div class="options">
+                            <input type="radio" name="q3" id="q3a" value="a" class="d-none">
+                            <label for="q3a" class="option-label">
+                                The website is popular
+                            </label>
+                            
+                            <input type="radio" name="q3" id="q3b" value="b" class="d-none">
+                            <label for="q3b" class="option-label">
+                                The connection to the website is encrypted
+                            </label>
+                            
+                            <input type="radio" name="q3" id="q3c" value="c" class="d-none">
+                            <label for="q3c" class="option-label">
+                                The website is government-approved
+                            </label>
+                            
+                            <input type="radio" name="q3" id="q3d" value="d" class="d-none">
+                            <label for="q3d" class="option-label">
+                                The website is free to use
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card question-card" id="question4">
+                    <div class="card-body">
+                        <h5 class="card-title">Question 4 of 5</h5>
+                        <p class="card-text">What is two-factor authentication (2FA)?</p>
+                        <div class="options">
+                            <input type="radio" name="q4" id="q4a" value="a" class="d-none">
+                            <label for="q4a" class="option-label">
+                                Using two different passwords for the same account
+                            </label>
+                            
+                            <input type="radio" name="q4" id="q4b" value="b" class="d-none">
+                            <label for="q4b" class="option-label">
+                                A security process where users provide two different authentication factors
+                            </label>
+                            
+                            <input type="radio" name="q4" id="q4c" value="c" class="d-none">
+                            <label for="q4c" class="option-label">
+                                Having two accounts for the same service
+                            </label>
+                            
+                            <input type="radio" name="q4" id="q4d" value="d" class="d-none">
+                            <label for="q4d" class="option-label">
+                                Using both uppercase and lowercase letters in your password
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card question-card" id="question5">
+                    <div class="card-body">
+                        <h5 class="card-title">Question 5 of 5</h5>
+                        <p class="card-text">What should you do before connecting to public Wi-Fi?</p>
+                        <div class="options">
+                            <input type="radio" name="q5" id="q5a" value="a" class="d-none">
+                            <label for="q5a" class="option-label">
+                                Nothing special, public Wi-Fi is always safe
+                            </label>
+                            
+                            <input type="radio" name="q5" id="q5b" value="b" class="d-none">
+                            <label for="q5b" class="option-label">
+                                Verify the network name with staff and use a VPN
+                            </label>
+                            
+                            <input type="radio" name="q5" id="q5c" value="c" class="d-none">
+                            <label for="q5c" class="option-label">
+                                Disable your firewall for better connection
+                            </label>
+                            
+                            <input type="radio" name="q5" id="q5d" value="d" class="d-none">
+                            <label for="q5d" class="option-label">
+                                Log in to all your important accounts first
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                    <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">Submit Quiz</button>
+                </div>
+            </form>
+
+            <div class="card result-card mt-4" id="resultCard">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Quiz Results</h3>
+                    <div class="score-display mb-3">
+                        <h1 class="display-1" id="score">0</h1>
+                        <p class="text-muted">out of 5 correct</p>
+                    </div>
+                    <div id="scoreMessage"></div>
+                    <div class="mt-4" id="answersFeedback"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.question-card');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const retryBtn = document.getElementById('retryBtn');
+            const progressBar = document.querySelector('.progress-bar');
+            const resultCard = document.getElementById('resultCard');
+            const quizForm = document.getElementById('quizForm');
+            
+            let currentQuestion = 0;
+            const totalQuestions = questions.length;
+            
+            const correctAnswers = {
+                q1: 'c',
+                q2: 'd',
+                q3: 'b',
+                q4: 'b',
+                q5: 'b'
+            };
+            
+            const answerExplanations = {
+                q1: "Using a password manager with unique passwords for each account is the most secure method. Password managers generate and store complex passwords, and you only need to remember one master password.",
+                q2: "Suspicious emails should be forwarded to your IT department or marked as spam. Never reply, click links, or download attachments from suspicious emails.",
+                q3: "HTTPS indicates that the connection between your browser and the website is encrypted, protecting your data from eavesdroppers.",
+                q4: "Two-factor authentication requires two different types of credentials (like a password and a code sent to your phone) for added security.",
+                q5: "Public Wi-Fi can be risky. Always verify the network name with staff and use a VPN to encrypt your internet traffic when on public networks."
+            };
+            
+            function updateProgress() {
+                const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+                progressBar.style.width = `${progress}%`;
+                progressBar.setAttribute('aria-valuenow', progress);
+            }
+            
+            function showQuestion(index) {
+                questions.forEach((question, i) => {
+                    question.classList.toggle('active', i === index);
+                });
+                
+                prevBtn.disabled = index === 0;
+                nextBtn.style.display = index === totalQuestions - 1 ? 'none' : 'block';
+                submitBtn.style.display = index === totalQuestions - 1 ? 'block' : 'none';
+                
+                updateProgress();
+            }
+            
+            nextBtn.addEventListener('click', function() {
+                if (currentQuestion < totalQuestions - 1) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                }
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentQuestion > 0) {
+                    currentQuestion--;
+                    showQuestion(currentQuestion);
+                }
+            });
+            
+            quizForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let score = 0;
+                const userAnswers = {};
+                const feedbackItems = [];
+                
+                for (const question in correctAnswers) {
+                    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                    userAnswers[question] = selectedOption ? selectedOption.value : null;
+                    
+                    if (userAnswers[question] === correctAnswers[question]) {
+                        score++;
+                    }
+                    
+                    const questionNumber = question.substring(1);
+                    feedbackItems.push(`
+                        <div class="mb-3 p-3 ${userAnswers[question] === correctAnswers[question] ? 'bg-success bg-opacity-10' : 'bg-danger bg-opacity-10'} rounded">
+                            <h5>Question ${questionNumber}</h5>
+                            <p><strong>Your answer:</strong> ${selectedOption ? selectedOption.nextElementSibling.textContent.trim() : 'Not answered'}</p>
+                            <p><strong>Correct answer:</strong> ${document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`).nextElementSibling.textContent.trim()}</p>
+                            <p class="text-muted">${answerExplanations[question]}</p>
+                        </div>
+                    `);
+                }
+                
+                document.getElementById('score').textContent = score;
+                document.getElementById('answersFeedback').innerHTML = feedbackItems.join('');
+                
+                const scoreMessage = document.getElementById('scoreMessage');
+                if (score === totalQuestions) {
+                    scoreMessage.innerHTML = '<div class="alert alert-success">Perfect! You\'re a cybersecurity expert!</div>';
+                } else if (score >= totalQuestions * 0.7) {
+                    scoreMessage.innerHTML = '<div class="alert alert-info">Good job! You have solid cybersecurity knowledge.</div>';
+                } else if (score >= totalQuestions * 0.4) {
+                    scoreMessage.innerHTML = '<div class="alert alert-warning">Not bad, but there\'s room for improvement.</div>';
+                } else {
+                    scoreMessage.innerHTML = '<div class="alert alert-danger">Consider learning more about cybersecurity basics.</div>';
+                }
+                
+                quizForm.style.display = 'none';
+                resultCard.style.display = 'block';
+            });
+            showQuestion(0);
+        });
+    </script>
+</body>
+</html>

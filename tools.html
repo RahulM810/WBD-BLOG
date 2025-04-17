@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Tools | Cybersecurity Awareness Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tool-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="border-bottom lh-1 py-3">
+        </header>
+        <div class="nav-scroller py-1 mb-3 border-bottom">
+            <nav class="nav nav-underline justify-content-between">
+                <a class="nav-item nav-link link-body-emphasis" href="index.html">Latest Threats</a>
+                <a class="nav-item nav-link link-body-emphasis active" href="tools.html">Security Tools</a>
+                <a class="nav-item nav-link link-body-emphasis" href="quiz.html">Security Quiz</a>
+                <a class="nav-item nav-link link-body-emphasis" href="mission.html">Our Mission</a>
+                <a class="nav-item nav-link link-body-emphasis" href="team.html">Our Team</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+            <div class="col-md-8 px-0">
+                <h1 class="display-4 fst-italic">Essential Cybersecurity Tools</h1>
+                <p class="lead my-3">Discover the most effective tools to protect your digital assets and maintain robust security posture.</p>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="h-100 p-4 rounded-3 bg-body-tertiary">
+                    <h2>Tool Categories</h2>
+                    <p>We've organized tools by their primary function to help you find exactly what you need.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Network Security
+                            <span class="badge bg-primary rounded-pill">12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Vulnerability Scanning
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Password Management
+                            <span class="badge bg-primary rounded-pill">5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Encryption Tools
+                            <span class="badge bg-primary rounded-pill">7</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-4 rounded-3 bg-body-tertiary">
+                    <h2>Featured Tool</h2>
+                    <h4>Wireshark</h4>
+                    <p>Network protocol analyzer that lets you capture and interactively browse the traffic running on your network.</p>
+                    <a href="https://www.wireshark.org/" target="_blank" class="btn btn-outline-primary">Visit Tool</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="border-bottom pb-2 mb-4">Popular Security Tools</h2>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card tool-card">
+                    <span class="badge bg-success category-badge">Free</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Wireshark</h5>
+                        <p class="card-text">Network protocol analyzer for troubleshooting, analysis, and education.</p>
+                        <a href="https://www.wireshark.org/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Tool</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card tool-card">
+                    <span class="badge bg-warning text-dark category-badge">Freemium</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Bitwarden</h5>
+                        <p class="card-text">Open-source password manager with zero-knowledge encryption.</p>
+                        <a href="https://bitwarden.com/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Tool</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card tool-card">
+                    <span class="badge bg-success category-badge">Free</span>
+                    <div class="card-body">
+                        <h5 class="card-title">KeePass</h5>
+                        <p class="card-text">Lightweight, open-source password manager with strong encryption.</p>
+                        <a href="https://keepass.info/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Tool</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
